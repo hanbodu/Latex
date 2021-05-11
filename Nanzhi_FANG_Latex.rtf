@@ -1,0 +1,229 @@
+{\rtf1\ansi\ansicpg936\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \\documentclass[10pt, oneside]\{article\}\
+\\usepackage[a4paper, left=15mm,top=20mm, right=15mm, bottom=20mm]\{geometry\}\
+\\newcommand\{\\student\}\{Nanzhi FANG\}%Enter here your name\
+\\newcommand\{\\email\}\{nanzhi.fang@etu.univ-grenoble-alpes.fr\}%Enter here your email\
+\\newcommand\{\\homeworknumber\}\{\\#\}%Enter the homework number\
+\\usepackage\{framed\}\
+\\usepackage\{mathtools\}\
+\\usepackage[utf8]\{inputenc\} \
+\\usepackage[french]\{babel\}\
+\\usepackage\{longtable\}\
+\\usepackage\{tocloft\}\
+\\renewcommand\{\\cftsecleader\}\{\\cftdotfill\{\\cftdotsep\}\}\
+\\newcommand\{\\UGA\}\{Universit\\'e Grenoble Alpes\}\
+\\newcommand\{\\PHITEM\}\{UFR PhITEM\}\
+\\usepackage\{enumitem\}\
+\\usepackage\{xspace\}\
+\\usepackage\{xcolor\}\
+\\usepackage\{hyperref\}\
+\\hypersetup\{\
+pdfencoding=auto,\
+    colorlinks,\
+    linkcolor=\{red!50!black\},\
+    citecolor=\{blue!50!black\},\
+    urlcolor=\{blue!80!black\}\}\
+\\usepackage[T1]\{fontenc\}\
+\\usepackage[hyphenbreaks]\{breakurl\}\
+\\author\{\\student\}\
+\\colorlet\{shadecolor\}\{gray!25\}\
+\\renewenvironment\{leftbar\}\{%\
+   \\def\\FrameCommand\{\\textcolor\{shadecolor\}\{\\vrule width 2pt\} \\hspace\{10pt\}\}%\
+   \\MakeFramed \{\\advance\\hsize-\\width \\FrameRestore\}\}%\
+\{\\endMakeFramed\}\
+%\\allsectionsfont\{\\centering\} \
+%%%%%%%\
+\\usepackage\{titlesec\}\
+\
+\\makeatletter\
+\\newif\\if@secnum\
+\\definecolor\{lgray\}\{gray\}\{0.75\}\
+\\titleformat\{\\section\}[hang]\{\\Large\\bfseries\}\{%\
+    \\global\\@secnumtrue\
+\}\{0em\}\{%\
+    \{%\
+        \\setlength\{\\fboxsep\}\{0pt\}%\
+        \\colorbox\{lgray\}\{\\makebox[\\textwidth]\{\\Large\\strut\}\}%\
+    \}%\
+    \\hspace*\{-\\textwidth\}%\
+    \\if@secnum%\
+        \\arabic\{section\}%\
+        \\hspace*\{1em\}%\
+    \\fi%\
+    \\global\\@secnumfalse%\
+\}[]\
+\\makeatother\
+\\usepackage\{graphicx\}\
+\\usepackage\{subfigure\}\
+%\\usepackage\{caption\}\
+\\usepackage[]\{caption2\}\
+\\usepackage\{subcaption\}\
+\\usepackage\{float\}\
+%%%%%%%\
+\\begin\{document\}\
+\\pagenumbering\{gobble\}\
+\\begin\{titlepage\}\
+\\begin\{center\}\
+\{\\Huge\{\\bf \\UGA\}\}\\\\\
+\\vskip0.5cm\
+\\includegraphics[scale=0.2]\{template/Image/Logo_Universit\'e9_Grenoble_Alpes_2020.svg.png\}\
+\\vskip1cm\
+\{\\LARGE\{\\bf \\PHITEM\}\}\
+\\vskip1cm\
+\{\\Large\{\\bf Licence EEA\}\}\
+\\end\{center\}\
+\\noindent\\makebox[\\linewidth]\{\\rule\{0.5\\paperwidth\}\{0.8pt\}\}\
+\\vskip1cm\
+\\begin\{center\}\
+\\par\
+\{\\Large\\textbf\{Signaux et Syst\'e8mes\}\}\
+\
+\\vspace\{0.5cm\}\
+\{\\Large\\textbf\{TP : Filtrage par circuits commut\'e9s\}\}\
+\\vskip0.5cm\
+\\today\
+\
+\\end\{center\}\
+\
+\\noindent\\makebox[\\linewidth]\{\\rule\{0.8\\paperwidth\}\{2pt\}\}\
+\\vspace\{0.2cm\}\
+\
+\\begin\{longtable\}[l]\{p\{150pt\} p\{273pt\}\} \
+Name:&\\student\\\\\
+Email address:&\\href\{mailto:\\email\}\{\\email\}\
+\\end\{longtable\}\
+\\noindent\\makebox[\\linewidth]\{\\rule\{0.8\\paperwidth\}\{0.8pt\}\}\
+\\setcounter\{tocdepth\}\{1\}\
+\\tableofcontents \
+\\end\{titlepage\}\
+%\\includepdfmerge\{annexes/galaxie1.eps,annexes/galaxie2.eps,annexes/galaxie3.eps\}\
+\\leavevmode\\thispagestyle\{empty\}\\newpage\
+\\pagenumbering\{arabic\}\
+\\section\{Introduction\}\
+Dans cette s\'e9ance de travaux pratique, nous allons \'e9tudier les signaux filtr\'e9s par des circuits \'e0 commutation via la maquette ci-dessus(la Figure 1). Nous pouvons consid\'e9rer ces signaux comme des signaux analogiques ayant subi un \'e9chantillonnage et une op\'e9ration de maintien ou blocage. Nous analysons leurs caract\'e9ristiques temporelle et fr\'e9quentielle \'e0 l'aide d'un oscilloscope num\'e9rique qui \'e0 son tour effectue un \'e9chantillonnage et une num\'e9risation permettant d'afficher soit la repr\'e9sentation temporelle, soit la repr\'e9sentation fr\'e9quentielle sous la forme du spectre FFT ("fast Fourier transform").\
+\\begin\{figure\}[!h]\
+\\centering\
+\\subfigure[pratique]\{\
+\\label\{Fig.sub.1\}\
+\\includegraphics[scale=0.09]\{template/Image/CarteFiltre.jpg\}\}\
+\\subfigure[th\'e9orique]\{\
+\\label\{Fig.sub.2\}\
+\\includegraphics[scale=0.45]\{template/Image/Maquette.png\}\}\
+\\label\{Fig.main\}\
+\\caption\{Maquette utilis\'e9\}\
+\\end\{figure\}\\par\
+La maquette a deux filtres passe-bas \'e0 capacit\'e9s commut\'e9es de type LTC1064, et leur horloge de commande peut \'eatre choisie soit commune avec l'horloge interne, soit externe(signal TTL \'e0 mettre \'e0 l'entr\'e9e horloge n\'b02) en actionnant le bouton inverseur situ\'e9 au centre de la maquette. Nous allons pr\'e9senter le sujet dans trois parties dans l'ordre : la pr\'e9paration, les mesures et la conclusion.\
+\\section\{pr\'e9paration\}\
+\\textbf\{Question\} : D'apr\'e8s les courbes de r\'e9ponse donn\'e9es en annexe dans les documentations, retracer les modules des transmittances en fonction du rapport $f/f_c$(o\'f9 fc = 95[kHz] pour le LTC1064-3 et fc = 100[kHz], courbe C pour le LTC1064-4) en \'e9chelle lin\'e9aire sur papier millim\'e9tr\'e9.\\newline \
+\\textbf\{R\'e9ponse\} : \
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.8]\{template/Image/capcom2.png\}\
+\\caption\{Module de la transmittance du \uc0\u64257 ltre 1\}\
+\\end\{figure\} \\par\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.6]\{template/Image/capcom1.png\}\
+\\caption\{Module de la transmittance du \uc0\u64257 ltre 2\}\
+\\end\{figure\} \\newpage\
+\\section\{Mesures\}\
+\\subsection\{Filtrage passe-bas \'e0 capacit\'e9s commut\'e9es de type actif\}Nous saisons que la fr\'e9quence d'horloge $f_2$ d\'e9termine la fr\'e9quence de coupure $f_c$ de ces filtres : soit $f2/75=f_\{c1\}$ pour le LTC1064-3(filtre n\'b01 de type Bessel, \'e0 d\'e9phasage proportionnel \'e0 la fr\'e9quence dans la bande passante), soit $f2/50=f_\{c2\}$ pour le LTC1064-4(filtre n\'b02 de type Cauer ou elliptique, \'e0 coupure tr\'e8s raide d'environ 80[dB/octave]). La maquette doit \'eatre aliment\'e9e en +5[V] et en \'b115[V]. \
+\\paragraph\{3.1.1\}Utiliser l'horloge interne de la maquette ou si elle n'est pas disponible la sortie TTL d'un g\'e9n\'e9rateur de fonction et v\'e9rifier la relation entre la fr\'e9quence de coupure et la fr\'e9quence de l'horloge pour le filtre LTC1064-3(n\'b01) en mettant \'e0 l'entr\'e9e "filtre" une sinuso\'efde de 2 ou 3volts d'amplitude maximale et en recherchant la fr\'e9quence pour laquelle l'att\'e9nuation est de 3[dB](soit 5/7\'e8me) pour diverses fr\'e9quences d'horloge dans la gamme 75[kHz]\'965[MHz].\\newline\
+\\textbf\{R\'e9ponse\} : L'horloge interne ne fonctionne pas, alors nous avons utilis\'e9 l'horloge externe : un signal carr\'e9 d'amplitude de 5[V] avec l'offset de 2.5[V] ; et nous avons d\'e9fini les param\'e8tres du signal entr\'e9e sinuso\'efde \'e0 : amplitude=2[V], phase=0, offset=0, fr\'e9quence $f_\{c1\}$ varie(voir le tableau ci-dessous), \'e9galement pour toute la suite. \
+\\begin\{center\}\
+    \\begin\{tabular\}\{|c|c|c|c|c|c|c|c|c|\}\
+    \\hline\
+    $f_2[Hz]$ &5M &4M &3M &2M &1M &500K &100K &75K\\\\\\hline\
+    $f_\{c1\}[kHz]$ &66.67 &53.33 &40.00 &26.67 &13.33 &6.67 &1.33 &1.00\\\\\\hline\
+    $S_1[V]$ &1.56 &1.5 &1.48 &1.44 &1.46 &2 &1.42 &1.42\\\\\\hline\
+    $E[V]$ &2.12 &2.12 &2.12 &2.08 &2.08 &2.08 &2.04 &2.04\\\\\\hline\
+    $S_1/E$ &0.74 &0.71 &0.70 &0.69 &0.70 &0.96 &0.70 &0.70\\\\\
+    \\hline\
+    \\end\{tabular\}\
+\\end\{center\}\\par\
+ Nous avons r\'e9gl\'e9 la $f_2$ \'e0 8 valeurs diff\'e9rentes entre la gamme 75[kHz]\'965[MHz], nous avons calcul\'e9 et appliqu\'e9 les valeurs de $f_\{c1\}=f2/75$ correspondant, puis nous visualisions les amplitudes du signal sortie(S[V]) et les amplitude du signal entr\'e9e(E[V]) sur l'oscilloscope. Nous savons que $$Attenuation=3[dB]=20log(|\\frac\{S\}\{E\}|)$$ alors $$\\Rightarrow \\frac\{S\}\{E\}=\\frac\{5\}\{7\}=0.71$$ donc pour tous les $S_1/E$ au tour de 0.71(sauf $f_2=500[KHz]$), la relation $f_2/75=f_\{c1\}$ est v\'e9rifi\'e9e.\
+\\paragraph\{3.1.2\}Pour une fr\'e9quence de coupure du filtre de quelques kHz(\'e0 choisir \'e0 l'aide de la fr\'e9quence d'horloge), observer la FFT du signal de sortie lorsque la fr\'e9quence de la sinuso\'efde \'e0 l'entr\'e9e varie de part et d'autre de la fr\'e9quence de coupure et en d\'e9duire le trac\'e9 du module de la transmittance en fonction de $f_2/f_\{c1\}$. Comparer avec la pr\'e9paration.\\newline\
+\\textbf\{R\'e9ponse\} : La question pr\'e9c\'e9dente nous a permit de pouvoir d\'e9limit\'e9 notre plage de fr\'e9quence de coupure en fonction de la fr\'e9quence de l'horloge par la relation $\\frac\{f_2\}\{75\}$ ( avec f2 la fr\'e9quence de notre horloge) et c'est ce qui nous permet de pouvoir choisir sans trop de r\'e9flection une fr\'e9quence de coupure pour l'\'e9tude du FFT.\\newline\
+La fr\'e9quence de coupure $f\{c1\}=1[kHz]$ qui \'e0 pour fr\'e9quence d'horloge 75kHz est celle que nous choisissons pour observer la FFT de notre signal en parcourant ces alentours pour en d\'e9duire le module de sa transmittance.\\newline\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.15]\{template/Image/IMG_9709.jpg\}\
+\\caption\{FFT du signal d'entr\'e9e de la $f_\{c1\}$\}\
+\\end\{figure\} \\newline\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.18]\{template/Image/IMG_9710.jpg\}\
+\\caption\{FFT du signal de sortie de la $f_\{c1\}$\}\
+\\end\{figure\} \\newpage\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.8]\{template/Image/module1.png\}\
+\\caption\{module de la transmittance\}\
+\\end\{figure\}\\par\
+Observation : Nous remarquons apr\'e8s nos diff\'e9rents mesure que Les r\'e9sultats obtenu sont en accord avec les r\'e9sultats de la pr\'e9paration.\
+\\paragraph\{3.1.3\}Pour une fr\'e9quence de coupure de quelques kHz, et toujours un signal sinuso\'efdal \'e0 l'entr\'e9e, mesurer le d\'e9phasage entre la sortie et l'entr\'e9e pour 5 ou 6 fr\'e9quences \'e9quidistantes entre z\'e9ro et la fr\'e9quence de coupure du filtre. Tracer ce d\'e9phasage $\\Phi$ en fonction de la fr\'e9quence en \'e9chelle lin\'e9aire. Est-ce que le filtre m\'e9rite le qualificatif de "filtre lin\'e9aire"(sous-entendu apportant un d\'e9phasage variant lin\'e9airement avec la fr\'e9quence dans la bande passante)? D\'e9duire de la courbe le temps moyen de propagation de groupe $-d\\phi/d\\omega=-d\\phi/(2\\pi df)$.\\newline\
+\\textbf\{R\'e9ponse\} : Pour le filtre LTC1064-3(n$^\\circ1$), nous avons d\'e9fini la fr\'e9quence d'horloge externe $f_\{c1\}=75[kHz]$, donc la fr\'e9quence de coupure du signal entr\'e9e$f_c=1[kHz]$. Et nous avons obtenu le d\'e9phasage $\\phi$ en [$\\mu$s], puis nous pouvons le d\'e9phasage $\\phi$ en radian(voir le tableau ci-dessous),  d'apr\'e8s la formule $$\\phi[rad]=2\\pi\\frac\{\\phi[s]\}\{T\}$$, avec T la p\'e9riode du signal. Nous avons la p\'e9riode $T=\\frac\{1\}\{f\}=\\frac\{1\}\{1k\}=1[ms]$.\
+\\begin\{center\}\
+    \\begin\{tabular\}\{|c|c|c|c|c|c|c|\}\
+    \\hline\
+    $f_2[kHz]$ &0 &15 &30 &45 &60 &75\\\\\\hline\
+    $f_\{c1\}[Hz]$ &0 &200 &400 &600 &800 &1k\\\\\\hline\
+    $\\phi[\\mu s]$ &/ &2400 &1240 &800 &620 &500\\\\\\hline\
+    $\\phi[rad]$ &/ &15.08 &7.79 &5.03 &3.90 &3.14\\\\\\hline\
+    $\\phi[rad]$ &/ &$4.8\\pi$ &$2.48\\pi$ &$1.6\\pi$ &$1.24\\pi$ &$\\pi$\\\\\
+    \\hline\
+    \\end\{tabular\}\
+\\end\{center\}\
+Nous avons trac\'e9 la diagramme de d\'e9phasage $\\phi$ en fonction de la fr\'e9quence de coupure suivante :\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.6]\{template/Image/phi(fc1).png\}\
+\\caption\{Diagramme de $\\phi(fc1)$\}\
+\\end\{figure\}\\newline\
+Nous pouvons dire que le filtre ne m\'e9rite pas de qualificatif de "filtre lin\'e9aire", parce que la courbe n'est pas lin\'e9aire. Ensuite nous d\'e9duirons la courbe le temps moyen de propagation de groupe $d\\phi/d\\omega=d\\phi/(2\\pi df)$.\
+\\paragraph\{3.1.4\}V\'e9rifier la relation entre la fr\'e9quence de coupure et la fr\'e9quence de l'horloge pour le filtre LTC1064-4(n\'b02) en mettant \'e0 l'entr\'e9e "filtre" une sinuso\'efde de 2 ou 3 volts d'amplitude maximale et en recherchant la fr\'e9quence pour laquelle l'att\'e9nuation est de 3[dB](soit 5/7\'e8me) pour diverses fr\'e9quences d'horloge dans la gamme 75kHz\'965MHz.\\newline\
+\\textbf\{R\'e9ponse\} : En appliquant les diff\'e9rentes fr\'e9quences d'horloge externe $f_2$ et de signal entr\'e9e $f_\{c2\}=f_2/50$, nous avons visualis\'e9 les amplitudes de signal sortie($S_2[V]$) et de signal entr\'e9e(E[V]), pr\'e9sent\'e9s dans le tableau ci-dessous.\
+\\begin\{center\}\
+    \\begin\{tabular\}\{|c|c|c|c|c|c|c|c|c|\}\
+    \\hline\
+    $f_2[Hz]$ &5M &4M &3M &2M &1M &500K &100K &75K\\\\\\hline\
+    $f_\{c2\}[kHz]$ &100 &80 &60 &40 &20 &10 &2 &1.5\\\\\\hline\
+    $S_2[V]$ &1.38 &1.36 &1.34 &1.3 &2.24 &1.88 &1.84 &1.84\\\\\\hline\
+    $E[V]$ &2.12 &2.12 &2.12 &2.08 &2.08 &2.08 &2.04 &2.04\\\\\\hline\
+    $S_2/E$ &0.65 &0.64 &0.63 &0.63 &1.08 &0.90 &0.90 &0.90\\\\\\hline\
+    $S_2/2$ &0.69 &0.68 &0.67 &0.65 &1.12 &0.94 &0.92 &0.92\\\\\
+    \\hline\
+    \\end\{tabular\}\
+\\end\{center\}\\par \
+Nous avons constat\'e9 que l'amplitude E d\'e9passe un peu de 2[V], c'est l'erreur normale, nous pouvons calculer \'e9galement $S_2/2$. Avec les m\'eame formules dans la question 3.1.1, nous pouvons dire que pour les fr\'e9quences $f_2$ de 5[MHz] \'e0 2[MHz], c'est-\'e0-dire $f_\{c2\}$ de 100[KHz] \'e0 40[KHz], la relation $f_\{c2\}=f_2/50$ est v\'e9rifi\'e9e. Si nous voulons garder l'att\'e9nuation de 3[dB], nous perdrons un peu de fr\'e9quence de coupure du signal entr\'e9e. \
+\\paragraph\{3.1.5\}Pour une fr\'e9quence de coupure du filtre de quelques kHz, observer la FFT du signal de sortie lorsqu'on la fr\'e9quence de la sinuso\'efde \'e0 l'entr\'e9e varie de part et d'autre de la fr\'e9quence de coupure et en d\'e9duire le trac\'e9 du module de la transmittance en fonction de $f/f_c$ en \'e9chelle lin\'e9aire. Comparer avec la pr\'e9paration.\\newline\
+\\textbf\{R\'e9ponse\} : La fr\'e9quence de coupure $fc= 30kHz$ qui \'e0 pour fr\'e9quence d'horloge 1.5MHz est celle que nous choisissons pour observer la FFT de notre signal en parcourant ces alentours pour en d\'e9duire le module de sa transmittance.\\newline\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.15]\{template/Image/IMG_9707.jpg\}\
+\\caption\{FFT du signal d'entr\'e9e de la $f_c$ \}\
+\\end\{figure\} \\newline\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.15]\{template/Image/IMG_9706.jpg\}\
+\\caption\{FFT du signal de sort1e de la $f_c$\}\
+\\end\{figure\} \\newpage\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.8]\{template/Image/module2.png\}\
+\\caption\{ module de la transmittance\}\
+\\end\{figure\}\\par\
+Observation : Nous remarquons apr\'e8s nos diff\'e9rentes mesure que les r\'e9sultats obtenus sont similaire par rapport aux r\'e9sultats de la pr\'e9paration.\\newpage\
+\\paragraph\{3.1.6\}Connecter un signal carr\'e9 \'e0 l'entr\'e9e filtre et faire varier la fr\'e9quence du filtre pour \'e9liminer progressivement les harmoniques de ce signal en observant alternativement le signal temporel et sa FFT \'e0 la sortie du filtre pour chaque fr\'e9quence de coupure du filtre n\'b02. Quelle relation peut-on mettre en \'e9vidence qualitativement entre la pente maximale du signal temporel et son spectre ?\\newline\
+\\textbf\{R\'e9ponse\} : Nous avons r\'e9gl\'e9 le signal entr\'e9e \'e0 un signal carr\'e9 comme ci-dessus :\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.09]\{template/Image/Signal3.6.jpg\}\
+\\caption\{Signal entr\'e9e de 3.1.6\}\
+\\end\{figure\}\\newline\
+Alors la fr\'e9quence d'horloge est 1.5[MHz], nous avons obtenu la FFT de signal sortie suivante(voir la Figure 12). Nous voyons bien le premier spectre est le signal sortie de la fr\'e9quence de 30[kHz], et deux harmoniques de 60[kHz] et 90[kHz].\
+\\begin\{figure\}[!ht]\\centering\
+\\includegraphics[scale=0.15]\{template/Image/FFT3.1.6.jpg\}\
+\\caption\{FFT de 3.1.6\}\
+\\end\{figure\}\\newpage\
+\\section\{Conclusion\}\
+A la \uc0\u64257 n de ce travail pratique, nous avons puis apprendre qu'il existait une relation lin\'e9aire entre la fr\'e9quence de l'horloge et la fr\'e9quence de coupure du filtre. Nous avons aussi remarqu\'e9 sur ces filtres que le d\'e9phasage est en exponentiel \'e0 la fr\'e9quence des signaux (d\'92entr\'e9e et de sortie). Il est aussi ind\'e9pendant de la fr\'e9quence de coupure. Ces deux \u64257 ltres sont un peu particuliers car leurs fr\'e9quences de coupures sont r\'e9glables en jouant sur la p\'e9riode de l\'92horloge, \'e0 cot\'e9 de cela, chacun de ces \u64257 ltres constitue un \u64257 ltre et un \'e9chantillonneur en m\'eame temps. Les deux \u64257 ltr\'e9s \'e9tudi\'e9s dans le TP sont des filtres passe-bas .\
+\\end\{document\}\
+\
+}
